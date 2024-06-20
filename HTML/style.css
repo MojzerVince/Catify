@@ -4,6 +4,9 @@
     font-weight: 450;
     font-style: normal;
 }
+p{
+    margin: 0;
+}
 
 .container{
     width: 390px;
@@ -17,6 +20,7 @@
     "content"
     "bottom";
 }
+
 .navbar{
     grid-area: navbar;
 }
@@ -37,7 +41,22 @@
 #selected{
     color: #2B2121;
     font-size: 20px;
-    margin: 0;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.content{
+    grid-area: content;
+    width: 346px;
+    height: 314px;
+    background-color: #716250;
+    margin-top: 87px;
+    margin-left: 22px;
+    border-radius: 33px;
+}
+#content{
+    color: #FFFFFF;
+    font-size: 24px;
     text-align: center;
     margin-top: 5px;
 }

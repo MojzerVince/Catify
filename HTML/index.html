@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="../icons/apps.png" alt="Options">
+            <img src="../icons/apps.png" alt="Options" class="options" onclick="Options()">
             <div class="selected">
                 <p id="selected">SELECTED</p>
             </div>
@@ -22,18 +22,22 @@
         <div class="content">
             <p id="content">CONTENT</p>
         </div>
+        <div class="generate" onclick="Generate()">
+            <p id="generate">Generate cat stuff</p>
+        </div>
         <div class="bottom">
-            <div class="design"></div>
-            <div class="opt1">
+            <div class="design" onclick="Close()"></div>
+            <div class="opt1" onclick="CatFacts()">
                 <p>Cat Facts</p>
                 <div class="arrow-button"><img src="../icons/angle-small-left.png" alt="Arrow"></div>
             </div>
-            <div class="opt2">
+            <div class="opt2" onclick="CatImages()">
                 <p>Cat Images</p>
                 <div class="arrow-button"><img src="../icons/angle-small-left.png" alt="Arrow"></div>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

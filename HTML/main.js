@@ -6,9 +6,14 @@ async function Generate(){
     const body = await response.json();
 
     let content = document.querySelector("#content");
-    //let firstIndex = JSON.stringify(body).indexOf(".")+1;
     let lastIndex = JSON.stringify(body).lastIndexOf("l")-3;
-    content.textContent = JSON.stringify(body).substring(9, lastIndex);
+    
+    let text = JSON.stringify(body).substring(9, lastIndex);
+    if(text.charAt(lastIndex-10) != "." &&
+     text.charAt(lastIndex-10) != "!")
+     text += ".";
+
+    content.textContent = text;
     console.log(body);
     console.log(lastIndex);
 }

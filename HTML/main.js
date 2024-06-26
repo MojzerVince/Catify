@@ -2,19 +2,15 @@ let selected = document.querySelector("#selected");
 let bottom = document.querySelector(".bottom");
 
 async function Generate(){
-    const response = await fetch("https://catfact.ninja/fact?");
+    const response = await fetch("https://catfact.ninja/fact?max_length=370");
     const body = await response.json();
 
     let content = document.querySelector("#content");
-    let firstIndex = JSON.stringify(body).indexOf(".")+1;
-    if(firstIndex === -1 || firstIndex === 0){
-        firstIndex = JSON.stringify(body).indexOf(",");
-        firstIndex-=1;
-        //console.log(firstIndex === -1)
-    }
-    content.textContent = JSON.stringify(body).substring(9, firstIndex);
+    //let firstIndex = JSON.stringify(body).indexOf(".")+1;
+    let lastIndex = JSON.stringify(body).lastIndexOf("l")-3;
+    content.textContent = JSON.stringify(body).substring(9, lastIndex);
     console.log(body);
-    console.log(firstIndex);
+    console.log(lastIndex);
 }
 
 function CatFacts(){

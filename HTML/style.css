@@ -32,8 +32,8 @@ p{
     margin-left: 15px;
     margin-top: 15px;
     cursor: pointer;
-    /*filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 2px) brightness(100%);
-*/}
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 2px) brightness(100%);
+}
 .selected{
     display: inline-block;
     width: 137px;
@@ -52,17 +52,18 @@ p{
 .content{
     grid-area: content;
     width: 346px;
-    height: 314px;
     background-color: #716250;
+    margin: auto;
     margin-top: 87px;
     margin-left: 22px;
     border-radius: 33px;
+    padding: 5px 0;
+    text-align: center;
 }
 #content{
     color: #FFFFFF;
     font-size: 24px;
-    text-align: center;
-    margin-top: 5px;
+    padding: 5px;
 }
 .generate{
     cursor: pointer;
